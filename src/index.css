@@ -1,5 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-hover: #f4f4f5;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --text: #18181b;
+  --text-secondary: #71717a;
+  --text-muted: #a1a1aa;
+  --accent: #18181b;
+  --accent-hover: #27272a;
+  --danger: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --bg-secondary: #131313;
+  --bg-hover: #1f1f1f;
+  --border: #262626;
+  --border-strong: #404040;
+  --text: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent: #fafafa;
+  --accent-hover: #e4e4e7;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,30 +44,20 @@ html,
 body {
   min-height: 100vh;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  color: #e2e8f0;
-  background: #0a0a12;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(56, 189, 248, 0.15), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15), transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.08), transparent 50%);
-  z-index: -1;
-  pointer-events: none;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
   font-family: inherit;
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.3);
-  color: #fff;
+  background: var(--text);
+  color: var(--bg);
 }

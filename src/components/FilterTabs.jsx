@@ -1,7 +1,7 @@
 const filters = [
   { id: "all", label: "All" },
   { id: "active", label: "Active" },
-  { id: "completed", label: "Completed" },
+  { id: "completed", label: "Done" },
 ];
 
 export default function FilterTabs({ current, onChange }) {
